@@ -1,0 +1,33 @@
+<!--Title: view_inventory.html-->
+<!--Inventory view partial page -->
+<!--Author: RH -->
+
+<a name="invAnchor"></a>
+<div class="row">
+    <div class="box">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <hr>
+            <h2 class="intro-text text-center">Our current
+                <strong>inventory</strong>
+            </h2>
+            <hr>
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th data-field="id">Item</th>
+                    <th data-field="name">Quantity</th>
+                </tr>
+                </thead>
+                   <tr ng-repeat="inv in inventory">
+                       <td>{{ inv.displayName }}</td>
+                       <td>{{ inv.count }}</td>
+                   </tr>
+            </table>
+            <div class="text-center">
+               <button class="btn btn-large btn-primary" ng-click="reStockInventory()">Restock Inventory</button>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

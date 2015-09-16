@@ -1,0 +1,18 @@
+// Title: index.html.erb
+// Angular Main page
+// When this page is loaded in the browser the ng-app annotation will auto-start the Angular application 'Baristamatic'
+// defined in app/assets/javascripts/barista-app/app.js
+// Angular templates are loaded into the ng-view area based on selected url by the angular routing module setup in app.js
+// Author: RH
+
+//- Output content of layout.jade and include the blocks defined here in the layout
+extend layout
+
+block content
+    p
+        | Content
+
+    div.container
+        //ng-view is used by the ngRoute module to load html views here based on url
+        //In this case the Inventory and Drink table views will be loaded (only a single set of views are used for this app)
+        ng-view

@@ -1,0 +1,24 @@
+//
+// Mean simple dir structure - http://www.ibm.com/developerworks/library/wa-mean2/index.html
+//
+app
+   Contains server-side source code.
+config
+   Contains configuration files.
+node_modules
+   Contains the server-side modules specified in package.json.
+public
+   Contains client-side source code — including the lib directory, which contains the client-side libraries specified in bower.json, all Angular source code in public/js.
+
+.bowerrc - specifies where angular specific files are loaded
+bower.json - specifies angular/client specific files to import
+package.json - specifies nodejs/server side imports
+server.js - main server startup file
+
+
+//
+//Mongo Ingredient queries
+//
+
+//Find all
+ingredients.find({})

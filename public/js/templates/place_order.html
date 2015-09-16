@@ -1,0 +1,40 @@
+<!--Title: place_order.html -->
+<!--Order partial page -->
+<!--Author: RH -->
+<a name="buyAnchor"></a>
+<div class="row">
+   <div class="box">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+         <hr>
+         <h2 class="intro-text text-center">Place your
+            <strong>order</strong>
+         </h2>
+         <hr>
+         <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+               <th data-field="id">Item</th>
+               <th data-field="name">Quantity</th>
+               <th data-field="name">Cost</th>
+               <th data-field="name" data-halign="center" data-align="center">Currently Available</th>
+               <th data-field="name">Buy</th>
+            </tr>
+            </thead>
+            <tr ng-repeat="drink in drinks">
+               <td>{{ drink.number }}</td>
+               <td>{{drink.displayName}}</td>
+               <td>{{drink.cost}}</td>
+               <td data-halign="center" data-align="center">{{drink.inStock == true ? 'Yes':'No'}}</td>
+               <td>
+                  <button class="btn btn-large btn-primary" ng-click="buy(drink.number)" ng-disabled="!drink.inStock">
+                     Buy
+                  </button>
+               </td>
+            </tr>
+         </table>
+      </div>
+      <div class="col-md-2"></div>
+   </div>
+</div>
+

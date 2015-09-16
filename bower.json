@@ -1,0 +1,12 @@
+{
+  "name": "TestBaristamaticMean",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "latest",
+    "angular-route": "latest",
+    "bootstrap": "latest",
+    "angular-resource": "latest",
+    "angular-bootstrap": "latest",
+  },
+  "private": true
+}
